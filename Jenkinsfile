@@ -8,8 +8,5 @@ node('linux'){
     {
         sh 'ant'
     }
-    stage('Result')
-    {
-        junit 'reports/*.xml'
-    }
+   
 }
