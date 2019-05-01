@@ -11,7 +11,7 @@ node('linux'){
     }
     stage('Deploy')
     {
-        sh 'aws s3 cp /workspace/java-pipeline/ s3://seis665-anutamang/rectangle${BUILD_NUMBER}.jar'
+        sh 'aws s3 cp /workspace/java-pipeline/output.jar s3://seis665-anutamang/rectangle${BUILD_NUMBER}.jar'
     }
     stage('Report')
     {
