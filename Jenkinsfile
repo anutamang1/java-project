@@ -1,9 +1,9 @@
 node('linux'){
-    stage('Test')
+    stage('UnitTest')
     {
         git 'https://github.com/anutamang1/java-project.git'
-        sh 'ant -buildfile test.xml' 
-        junit 'reports/*.xml'
+        sh 'ant -f test.xml -v' 
+        junit 'reports/result.xml'
     }
     stage('Build')
     {
